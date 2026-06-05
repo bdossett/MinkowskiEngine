@@ -669,19 +669,19 @@ void non_templated_gpu_func(py::module &m) {
 void initialize_non_templated_classes(py::module &m) {
   // Enums
   py::enum_<minkowski::GPUMemoryAllocatorBackend::Type>(
-      m, "GPUMemoryAllocatorType", py::arithmetic())
+      m, "GPUMemoryAllocatorType")
       .value("PYTORCH", minkowski::GPUMemoryAllocatorBackend::Type::PYTORCH)
       .value("CUDA", minkowski::GPUMemoryAllocatorBackend::Type::CUDA)
       .export_values();
 
-  py::enum_<minkowski::CUDAKernelMapMode::Mode>(m, "CUDAKernelMapMode", py::arithmetic())
+  py::enum_<minkowski::CUDAKernelMapMode::Mode>(m, "CUDAKernelMapMode")
       .value("MEMORY_EFFICIENT",
              minkowski::CUDAKernelMapMode::Mode::MEMORY_EFFICIENT)
       .value("SPEED_OPTIMIZED",
              minkowski::CUDAKernelMapMode::Mode::SPEED_OPTIMIZED)
       .export_values();
 
-  py::enum_<minkowski::MinkowskiAlgorithm::Mode>(m, "MinkowskiAlgorithm", py::arithmetic())
+  py::enum_<minkowski::MinkowskiAlgorithm::Mode>(m, "MinkowskiAlgorithm")
       .value("DEFAULT", minkowski::MinkowskiAlgorithm::Mode::DEFAULT)
       .value("MEMORY_EFFICIENT",
              minkowski::MinkowskiAlgorithm::Mode::MEMORY_EFFICIENT)
@@ -689,18 +689,18 @@ void initialize_non_templated_classes(py::module &m) {
              minkowski::MinkowskiAlgorithm::Mode::SPEED_OPTIMIZED)
       .export_values();
 
-  py::enum_<minkowski::CoordinateMapBackend::Type>(m, "CoordinateMapType", py::arithmetic())
+  py::enum_<minkowski::CoordinateMapBackend::Type>(m, "CoordinateMapType")
       .value("CPU", minkowski::CoordinateMapBackend::Type::CPU)
       .value("CUDA", minkowski::CoordinateMapBackend::Type::CUDA)
       .export_values();
 
-  py::enum_<minkowski::RegionType::Type>(m, "RegionType", py::arithmetic())
+  py::enum_<minkowski::RegionType::Type>(m, "RegionType")
       .value("HYPER_CUBE", minkowski::RegionType::Type::HYPER_CUBE)
       .value("HYPER_CROSS", minkowski::RegionType::Type::HYPER_CROSS)
       .value("CUSTOM", minkowski::RegionType::Type::CUSTOM)
       .export_values();
 
-  py::enum_<minkowski::PoolingMode::Type>(m, "PoolingMode", py::arithmetic())
+  py::enum_<minkowski::PoolingMode::Type>(m, "PoolingMode")
       .value("LOCAL_SUM_POOLING",
              minkowski::PoolingMode::Type::LOCAL_SUM_POOLING)
       .value("LOCAL_AVG_POOLING",
@@ -727,14 +727,14 @@ void initialize_non_templated_classes(py::module &m) {
              minkowski::PoolingMode::Type::GLOBAL_MAX_POOLING_PYTORCH_INDEX)
       .export_values();
 
-  py::enum_<minkowski::BroadcastMode::Type>(m, "BroadcastMode", py::arithmetic())
+  py::enum_<minkowski::BroadcastMode::Type>(m, "BroadcastMode")
       .value("ELEMENTWISE_ADDITON",
              minkowski::BroadcastMode::Type::ELEMENTWISE_ADDITON)
       .value("ELEMENTWISE_MULTIPLICATION",
              minkowski::BroadcastMode::Type::ELEMENTWISE_MULTIPLICATION)
       .export_values();
 
-  py::enum_<minkowski::ConvolutionMode::Type>(m, "ConvolutionMode", py::arithmetic())
+  py::enum_<minkowski::ConvolutionMode::Type>(m, "ConvolutionMode")
       .value("DEFAULT", minkowski::ConvolutionMode::Type::DEFAULT)
       .value("DIRECT_GEMM", minkowski::ConvolutionMode::Type::DIRECT_GEMM)
       .value("COPY_GEMM", minkowski::ConvolutionMode::Type::COPY_GEMM)
