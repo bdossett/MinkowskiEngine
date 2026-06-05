@@ -307,6 +307,16 @@ ARGS = SOURCE_SETS[target][3]
 CC_FLAGS += ARGS
 NVCC_FLAGS += ARGS
 
+# Add CCCL include path for CUDA 12.0+
+if not CPU_ONLY:
+    import torch.utils.cpp_extension as torch_cpp_ext
+    cuda_home = CUDA_HOME if CUDA_HOME else torch_cpp_ext._find_cuda_home()
+    if cuda_home:
+        cccl_include = os.path.join(cuda_home, "include", "cccl")
+        if os.path.exists(cccl_include):
+            include_dirs.append(cccl_include)
+            print(f"Adding CCCL include path: {cccl_include}")
+
 ext_modules = [
     Extension(
         name="MinkowskiEngineBackend._C",
