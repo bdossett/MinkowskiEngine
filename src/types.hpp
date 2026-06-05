@@ -114,7 +114,7 @@ initialize_maps(default_types::size_type number_of_vectors,
 
 // GPU memory manager backend. No effect with CPU_ONLY build
 namespace GPUMemoryAllocatorBackend {
-enum Type { PYTORCH = 0, CUDA = 1 };
+enum Type : int { PYTORCH = 0, CUDA = 1 };
 }
 
 namespace MapManagerType {
@@ -122,50 +122,50 @@ enum Type { CPU = 0, CUDA = 1, C10 = 2 };
 }
 
 namespace CUDAKernelMapMode {
-enum Mode { MEMORY_EFFICIENT = 0, SPEED_OPTIMIZED = 1 };
+enum Mode : int { MEMORY_EFFICIENT = 0, SPEED_OPTIMIZED = 1 };
 }
 
 namespace MinkowskiAlgorithm {
-enum Mode { DEFAULT = 0, MEMORY_EFFICIENT = 1, SPEED_OPTIMIZED = 2 };
+enum Mode : int { DEFAULT = 0, MEMORY_EFFICIENT = 1, SPEED_OPTIMIZED = 2 };
 }
 
 namespace CoordinateMapBackend {
-enum Type { CPU = 0, CUDA = 1 };
+enum Type : int { CPU = 0, CUDA = 1 };
 }
 
 namespace RegionType {
-enum Type { HYPER_CUBE, HYPER_CROSS, CUSTOM };
+enum Type : int { HYPER_CUBE = 0, HYPER_CROSS = 1, CUSTOM = 2 };
 }
 
 namespace PoolingMode {
-enum Type {
-  LOCAL_SUM_POOLING,
-  LOCAL_AVG_POOLING,
-  LOCAL_MAX_POOLING,
-  GLOBAL_SUM_POOLING_DEFAULT,
-  GLOBAL_AVG_POOLING_DEFAULT,
-  GLOBAL_MAX_POOLING_DEFAULT,
-  GLOBAL_SUM_POOLING_KERNEL,
-  GLOBAL_AVG_POOLING_KERNEL,
-  GLOBAL_MAX_POOLING_KERNEL,
-  GLOBAL_SUM_POOLING_PYTORCH_INDEX,
-  GLOBAL_AVG_POOLING_PYTORCH_INDEX,
-  GLOBAL_MAX_POOLING_PYTORCH_INDEX
+enum Type : int {
+  LOCAL_SUM_POOLING = 0,
+  LOCAL_AVG_POOLING = 1,
+  LOCAL_MAX_POOLING = 2,
+  GLOBAL_SUM_POOLING_DEFAULT = 3,
+  GLOBAL_AVG_POOLING_DEFAULT = 4,
+  GLOBAL_MAX_POOLING_DEFAULT = 5,
+  GLOBAL_SUM_POOLING_KERNEL = 6,
+  GLOBAL_AVG_POOLING_KERNEL = 7,
+  GLOBAL_MAX_POOLING_KERNEL = 8,
+  GLOBAL_SUM_POOLING_PYTORCH_INDEX = 9,
+  GLOBAL_AVG_POOLING_PYTORCH_INDEX = 10,
+  GLOBAL_MAX_POOLING_PYTORCH_INDEX = 11
 };
 }
 
 namespace BroadcastMode {
-enum Type {
-  ELEMENTWISE_ADDITON,
-  ELEMENTWISE_MULTIPLICATION,
+enum Type : int {
+  ELEMENTWISE_ADDITON = 0,
+  ELEMENTWISE_MULTIPLICATION = 1,
 };
 }
 
 namespace ConvolutionMode {
-enum Type {
-  DEFAULT,
-  DIRECT_GEMM,
-  COPY_GEMM,
+enum Type : int {
+  DEFAULT = 0,
+  DIRECT_GEMM = 1,
+  COPY_GEMM = 2,
 };
 }
 
