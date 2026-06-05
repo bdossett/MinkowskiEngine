@@ -25,9 +25,9 @@
 #include "coordinate.hpp"
 #include "types.hpp"
 
-#include <thrust/functional.h>
-#include <thrust/host_vector.h>
-#include <thrust/pair.h>
+#include <cccl/thrust/functional.h>
+#include <cccl/thrust/host_vector.h>
+#include <cccl/thrust/pair.h>
 
 namespace minkowski {
 

@@ -28,9 +28,9 @@
 #include "types.hpp"
 #include "utils.hpp"
 
-#include <thrust/device_vector.h>
-#include <thrust/for_each.h>
-#include <thrust/host_vector.h>
+#include <cccl/thrust/device_vector.h>
+#include <cccl/thrust/for_each.h>
+#include <cccl/thrust/host_vector.h>
 
 #include <torch/extension.h>
 

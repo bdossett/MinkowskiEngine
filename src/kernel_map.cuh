@@ -37,11 +37,11 @@
 #include <map>
 #include <memory>
 
-#include <thrust/copy.h>
-#include <thrust/execution_policy.h>
-#include <thrust/iterator/constant_iterator.h>
-#include <thrust/iterator/counting_iterator.h>
-#include <thrust/sort.h>
+#include <cccl/thrust/copy.h>
+#include <cccl/thrust/execution_policy.h>
+#include <cccl/thrust/iterator/constant_iterator.h>
+#include <cccl/thrust/iterator/counting_iterator.h>
+#include <cccl/thrust/sort.h>
 
 namespace minkowski {
 

@@ -32,7 +32,7 @@
 #include <vector>
 
 #ifndef CPU_ONLY
-#include <thrust/host_vector.h>
+#include <cccl/thrust/host_vector.h>
 #endif
 
 namespace minkowski {

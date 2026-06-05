@@ -31,13 +31,13 @@
 #include "kernel_map.hpp"
 #include "sharedmem.cuh"
 
-#include <thrust/copy.h>
-#include <thrust/execution_policy.h>
-#include <thrust/iterator/counting_iterator.h>
-#include <thrust/iterator/transform_iterator.h>
-#include <thrust/sort.h>
-#include <thrust/remove.h>
-#include <thrust/unique.h>
+#include <cccl/thrust/copy.h>
+#include <cccl/thrust/execution_policy.h>
+#include <cccl/thrust/iterator/counting_iterator.h>
+#include <cccl/thrust/iterator/transform_iterator.h>
+#include <cccl/thrust/sort.h>
+#include <cccl/thrust/remove.h>
+#include <cccl/thrust/unique.h>
 
 namespace minkowski {
 

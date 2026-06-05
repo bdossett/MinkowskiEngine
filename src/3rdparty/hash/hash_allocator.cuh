@@ -18,7 +18,7 @@
 #define HASH_ALLOCATOR_CUH
 
 #include <new>
-#include <thrust/device_reference.h>
+#include <cccl/thrust/device_reference.h>
 
 template <class T>
 struct managed_allocator {

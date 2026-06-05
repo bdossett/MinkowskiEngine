@@ -28,7 +28,7 @@
 #include <array>
 #include <vector>
 
-#include <thrust/execution_policy.h>
+#include <cccl/thrust/execution_policy.h>
 
 #include "gpu.cuh"
 #include "kernel_map.cuh"

@@ -27,14 +27,14 @@
 
 #include <limits>
 
-#include <thrust/execution_policy.h>
-#include <thrust/fill.h>
-#include <thrust/host_vector.h>
+#include <cccl/thrust/execution_policy.h>
+#include <cccl/thrust/fill.h>
+#include <cccl/thrust/host_vector.h>
 
-#include <thrust/functional.h>
-#include <thrust/iterator/discard_iterator.h>
-#include <thrust/reduce.h>
-#include <thrust/sort.h>
+#include <cccl/thrust/functional.h>
+#include <cccl/thrust/iterator/discard_iterator.h>
+#include <cccl/thrust/reduce.h>
+#include <cccl/thrust/sort.h>
 
 #include "allocators.cuh"
 #include "gpu.cuh"
