@@ -671,34 +671,29 @@ void initialize_non_templated_classes(py::module &m) {
   py::enum_<minkowski::GPUMemoryAllocatorBackend::Type>(
       m, "GPUMemoryAllocatorType")
       .value("PYTORCH", minkowski::GPUMemoryAllocatorBackend::Type::PYTORCH)
-      .value("CUDA", minkowski::GPUMemoryAllocatorBackend::Type::CUDA)
-      .export_values();
+      .value("CUDA", minkowski::GPUMemoryAllocatorBackend::Type::CUDA);
 
   py::enum_<minkowski::CUDAKernelMapMode::Mode>(m, "CUDAKernelMapMode")
       .value("MEMORY_EFFICIENT",
              minkowski::CUDAKernelMapMode::Mode::MEMORY_EFFICIENT)
       .value("SPEED_OPTIMIZED",
-             minkowski::CUDAKernelMapMode::Mode::SPEED_OPTIMIZED)
-      .export_values();
+             minkowski::CUDAKernelMapMode::Mode::SPEED_OPTIMIZED);
 
   py::enum_<minkowski::MinkowskiAlgorithm::Mode>(m, "MinkowskiAlgorithm")
       .value("DEFAULT", minkowski::MinkowskiAlgorithm::Mode::DEFAULT)
       .value("MEMORY_EFFICIENT",
              minkowski::MinkowskiAlgorithm::Mode::MEMORY_EFFICIENT)
       .value("SPEED_OPTIMIZED",
-             minkowski::MinkowskiAlgorithm::Mode::SPEED_OPTIMIZED)
-      .export_values();
+             minkowski::MinkowskiAlgorithm::Mode::SPEED_OPTIMIZED);
 
   py::enum_<minkowski::CoordinateMapBackend::Type>(m, "CoordinateMapType")
       .value("CPU", minkowski::CoordinateMapBackend::Type::CPU)
-      .value("CUDA", minkowski::CoordinateMapBackend::Type::CUDA)
-      .export_values();
+      .value("CUDA", minkowski::CoordinateMapBackend::Type::CUDA);
 
   py::enum_<minkowski::RegionType::Type>(m, "RegionType")
       .value("HYPER_CUBE", minkowski::RegionType::Type::HYPER_CUBE)
       .value("HYPER_CROSS", minkowski::RegionType::Type::HYPER_CROSS)
-      .value("CUSTOM", minkowski::RegionType::Type::CUSTOM)
-      .export_values();
+      .value("CUSTOM", minkowski::RegionType::Type::CUSTOM);
 
   py::enum_<minkowski::PoolingMode::Type>(m, "PoolingMode")
       .value("LOCAL_SUM_POOLING",
@@ -724,15 +719,13 @@ void initialize_non_templated_classes(py::module &m) {
       .value("GLOBAL_AVG_POOLING_PYTORCH_INDEX",
              minkowski::PoolingMode::Type::GLOBAL_AVG_POOLING_PYTORCH_INDEX)
       .value("GLOBAL_MAX_POOLING_PYTORCH_INDEX",
-             minkowski::PoolingMode::Type::GLOBAL_MAX_POOLING_PYTORCH_INDEX)
-      .export_values();
+             minkowski::PoolingMode::Type::GLOBAL_MAX_POOLING_PYTORCH_INDEX);
 
   py::enum_<minkowski::BroadcastMode::Type>(m, "BroadcastMode")
       .value("ELEMENTWISE_ADDITON",
              minkowski::BroadcastMode::Type::ELEMENTWISE_ADDITON)
       .value("ELEMENTWISE_MULTIPLICATION",
-             minkowski::BroadcastMode::Type::ELEMENTWISE_MULTIPLICATION)
-      .export_values();
+             minkowski::BroadcastMode::Type::ELEMENTWISE_MULTIPLICATION);
 
   py::enum_<minkowski::ConvolutionMode::Type>(m, "ConvolutionMode")
       .value("DEFAULT", minkowski::ConvolutionMode::Type::DEFAULT)
