@@ -737,8 +737,7 @@ void initialize_non_templated_classes(py::module &m) {
   py::enum_<minkowski::ConvolutionMode::Type>(m, "ConvolutionMode")
       .value("DEFAULT", minkowski::ConvolutionMode::Type::DEFAULT)
       .value("DIRECT_GEMM", minkowski::ConvolutionMode::Type::DIRECT_GEMM)
-      .value("COPY_GEMM", minkowski::ConvolutionMode::Type::COPY_GEMM)
-      .export_values();
+      .value("COPY_GEMM", minkowski::ConvolutionMode::Type::COPY_GEMM);
 
   // Classes
   py::class_<minkowski::CoordinateMapKey>(m, "CoordinateMapKey")
