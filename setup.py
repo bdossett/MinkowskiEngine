@@ -175,7 +175,7 @@ if sys.platform == "win32":
 else:
     CC_FLAGS += ["-fopenmp"]
     # Workaround for pybind11 enum binding issue with newer C++ compilers
-    CC_FLAGS += ["-Wno-return-type"]
+    CC_FLAGS += ["-fpermissive"]
 
 if "darwin" in platform:
     CC_FLAGS += ["-stdlib=libc++", "-std=c++17"]
